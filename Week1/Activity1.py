@@ -1,22 +1,27 @@
-def calculate_factorial():
+def calculate_factorial(number):
+    if number < 0:
+        print("Error: Factorial is not defined for negative numbers.")
+        return None
+
+    factorial = 1
+    current = number
+
+    while current > 1:
+        factorial *= current
+        current -= 1
+
+    return factorial
+
+def main():
     try:
-        number = int(input("Enter a non-negative integer: "))
+        user_input = int(input("Enter a non-negative integer: "))
+        result = calculate_factorial(user_input)
 
-        if number < 0:
-            print("Error: Factorial is not defined for negative numbers.")
-            return
-
-        factorial = 1
-        current = number
-
-        while current > 1:
-            factorial *= current
-            current -= 1
-
-        print(f"The factorial of {number} is: {factorial}")
-
+        if result is not None:
+            print(f"The factorial of {user_input} is: {result}")
     except ValueError:
         print("Invalid input. Please enter a valid integer.")
 
-# Run the function
-calculate_factorial()
+# Entry point of the program
+if __name__ == "__main__":
+    main()
