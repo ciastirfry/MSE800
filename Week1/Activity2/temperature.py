@@ -1,5 +1,8 @@
-import numpy as np
+# Week 1 - Activity 2: Temperature Analysis with NumPy
+# Student: Fredierick Saladas
+# This script does some basic analysis on a list of weekly temperatures using NumPy.
 
+import numpy as np
 def main():
     # Temperature data in Celsius
     celsius_temps = np.array([18.5, 19, 20, 25.0, 2, 30, 13.9])

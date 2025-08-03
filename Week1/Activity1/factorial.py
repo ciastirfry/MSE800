@@ -1,3 +1,6 @@
+# Week 1 - Activity 1: Factorial Calculator using `while` Loop
+# Student: Fredierick Saladas
+
 def calculate_factorial(number):
     if number < 0:
         print("Error: Factorial is not defined for negative numbers.")
