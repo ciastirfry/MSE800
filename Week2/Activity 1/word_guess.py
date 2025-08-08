@@ -25,7 +25,7 @@ def is_word_guessed(display_word):
     return '_' not in display_word
 
 def start_game():
-    words_list = ['python', 'engineer', 'hangman', 'software', 'keyboard']
+    words_list = ['terraform', 'engineer', 'yoobee', 'software', 'keyboard', 'sugertree', 'queen', 'numpy', 'programming', 'developer']
     max_lives = 6
 
     chosen_word = generate_random_word(words_list)
