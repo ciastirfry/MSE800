@@ -1,61 +1,56 @@
-# Week 2 - Activity 1: Word Guessing Game
+# Week 2 - Activity 1: Word Guessing Game with loval variables
 # Student: Fredierick Saladas
 
 import numpy as np
-import random #library for random word selection
+import random
 
-# Global variables
-words_list = ['church', 'developer', 'coffee', 'software', 'laptop', 'sugartree', 'python', 'yoobee', 'programming', 'numpy']
-max_lives = 6
-chosen_word = ""
-display_word = None
-lives_left = max_lives
+def generate_random_word(word_list):
+    return random.choice(word_list)
 
-def generate_random_word():
-    global chosen_word, display_word
-    chosen_word = random.choice(words_list)
-    display_word = np.array(['_' for _ in chosen_word])
-    print("Guess the word: ", ' '.join(display_word))
+def initialize_display_word(word):
+    return np.array(['_' for _ in word])
 
 def ask_for_guess():
-    guess = input("Enter a letter: ").lower()
-    return guess
+    return input("Enter a letter: ").lower()
 
-def process_guess(guess):
-    global display_word, lives_left
+def update_display_word(chosen_word, display_word, guess):
+    updated = False
+    for i, letter in enumerate(chosen_word):
+        if letter == guess:
+            display_word[i] = guess
+            updated = True
+    return updated
 
-    if guess in chosen_word:
-        print("Correct guess!")
-        for idx, letter in enumerate(chosen_word):
-            if letter == guess:
-                display_word[idx] = guess
-    else:
-        print("Wrong guess!")
-        lives_left -= 1
-
-def check_game_over():
-    global lives_left, display_word
-    if '_' not in display_word:
-        print(f"\nYou guessed it right! The word was '{chosen_word}'.")
-        return True
-    elif lives_left <= 0:
-        print(f"\nYou ran out of lives. The word was '{chosen_word}'.")
-        return True
-    return False
+def is_word_guessed(display_word):
+    return '_' not in display_word
 
 def start_game():
-    global lives_left
+    words_list = ['python', 'engineer', 'hangman', 'software', 'keyboard']
+    max_lives = 6
+
+    chosen_word = generate_random_word(words_list)
+    display_word = initialize_display_word(chosen_word)
     lives_left = max_lives
-    generate_random_word()
-    
+
+    print("Guess the word: ", ' '.join(display_word))
+
     while True:
         guess = ask_for_guess()
-        process_guess(guess)
+        if update_display_word(chosen_word, display_word, guess):
+            print("Correct!")
+        else:
+            lives_left -= 1
+            print("Wrong! You lost a life.")
+
         print("Current word: ", ' '.join(display_word))
         print(f"Lives left: {lives_left}")
-        if check_game_over():
+
+        if is_word_guessed(display_word):
+            print(f"\nCongratulations! You guessed the word: '{chosen_word}'")
             break
-    print("GAME OVER.")
+        elif lives_left <= 0:
+            print(f"\nGame over! The word was: '{chosen_word}'")
+            break
 
 # Run the game
 if __name__ == "__main__":
