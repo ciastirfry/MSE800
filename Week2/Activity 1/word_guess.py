@@ -5,7 +5,7 @@ import numpy as np
 import random
 
 # Global variables
-words_list = ['church', 'developer', 'coffee', 'software', 'laptop']
+words_list = ['church', 'developer', 'coffee', 'software', 'laptop', 'sugartree', 'python', 'yoobee', 'programming', 'numpy']
 max_lives = 6
 chosen_word = ""
 display_word = None
