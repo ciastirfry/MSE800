@@ -1,4 +1,4 @@
-# Week 2 - Activity 1: Word Guessing Game with loval variables
+# Week 2 - Activity 1: Word Guessing Game with local variables
 # Student: Fredierick Saladas
 
 import numpy as np
