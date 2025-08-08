@@ -1,8 +1,8 @@
-# Week 2 - Activity 1: Word Guessing Game with Global Variables
+# Week 2 - Activity 1: Word Guessing Game
 # Student: Fredierick Saladas
 
 import numpy as np
-import random
+import random #library for random word selection
 
 # Global variables
 words_list = ['church', 'developer', 'coffee', 'software', 'laptop', 'sugartree', 'python', 'yoobee', 'programming', 'numpy']
