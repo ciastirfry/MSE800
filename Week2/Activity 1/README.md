@@ -21,3 +21,15 @@ This is a simple command-line implementation of the word-guessing game using **P
    ```bash
    python word_guess.py
    ```
+
+
+# Word Guessing Game (Class-based)
+
+**Week 2 - Activity 1**  
+**Student:** Fredierick Saladas  
+
+## Features
+- Class-based structure for cleaner code and easier maintenance.
+- Displays the **number of characters** in the word as a clue.
+- Tracks correct and incorrect guesses.
+- Ends when the player guesses all letters or runs out of lives.
