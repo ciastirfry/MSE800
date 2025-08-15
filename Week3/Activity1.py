@@ -1,4 +1,4 @@
-# Week 3 - Activity 1: File Handling
+# Week 3 - Activity 1: File Handling with OOP (print with line[0:-1])
 # Student: Fredierick Saladas
 
 class FileProcessor:
@@ -10,21 +10,20 @@ class FileProcessor:
         # --- READ ---
         infile = open(self.infile_path, "r", encoding="utf-8")
 
-        lines_list = []
-        for line in infile:
-            data = line.rstrip("\n")          # like splitting/stripping per line
-            lines_list.append(data)
-
         print("=== Original Content ===")
-        for content in lines_list:
-            print(content)
+        for line in infile:
+            print(line[0:-1])  # Print without the last character (newline)
 
         infile.close()
 
-        # --- WRITE ---
+        # --- COPY CONTENT ---
+        infile = open(self.infile_path, "r", encoding="utf-8")
         outfile = open(self.outfile_path, "w", encoding="utf-8")
-        for content in lines_list:
-            outfile.write(content + "\n")     # write back (could modify if needed)
+
+        for line in infile:
+            outfile.write(line)
+
+        infile.close()
         outfile.close()
 
         print(f"\nCopy written to: {self.outfile_path}")
