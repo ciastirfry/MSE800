@@ -1,5 +1,6 @@
 # Week 3 - Activity 3: Convert Dataset to Parquet and Compute Statistics
 # Student: Fredierick Saladas
+# Dataset: UCI Machine Learning Repository - Tic-Tac-Toe Endgame https://archive.ics.uci.edu/dataset/101/tic+tac+toe+endgame
 
 import numpy as np
 import pandas as pd
