@@ -1,5 +1,5 @@
-# Project Scope – YB College Database
-The YB College database will manage core academic and administrative records, focusing on students, lecturers, courses, and classes. It will centralize enrollment, teaching assignments, and course offerings to ensure accurate, efficient, and accessible information management for the college.
+# Project Scope – Yoobee College Database
+The Yoobee College database will manage core academic and administrative records, focusing on students, lecturers, courses, and classes. It will centralize enrollment, teaching assignments, and course offerings to ensure accurate, efficient, and accessible information management for the college.
 
 
 # Entities and Attributes
