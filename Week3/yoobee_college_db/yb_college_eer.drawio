@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" modified="2025-08-17T00:00:00.000Z" agent="python" version="24.7.7" type="device">
+  <diagram id="yb-college-eer" name="EER Diagram">
+    <mxGraphModel dx="1480" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+    <mxCell id="student" value="&lt;b&gt;&lt;u&gt;Student&lt;/u&gt;&lt;/b&gt;&lt;br/&gt;
+&lt;u&gt;StudentID&lt;/u&gt;&lt;br/&gt;
+Name&lt;br/&gt;
+Age&lt;br/&gt;
+Address&lt;br/&gt;
+Email (unique)" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="80" y="100" width="210" height="150" as="geometry"/>
+    </mxCell>
+        
+    <mxCell id="lecturer" value="&lt;b&gt;&lt;u&gt;Lecturer&lt;/u&gt;&lt;/b&gt;&lt;br/&gt;
+&lt;u&gt;LecturerID&lt;/u&gt;&lt;br/&gt;
+Name&lt;br/&gt;
+Department&lt;br/&gt;
+Email (unique)" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="430" y="100" width="210" height="150" as="geometry"/>
+    </mxCell>
+        
+    <mxCell id="course" value="&lt;b&gt;&lt;u&gt;Course&lt;/u&gt;&lt;/b&gt;&lt;br/&gt;
+&lt;u&gt;CourseID&lt;/u&gt;&lt;br/&gt;
+CourseName&lt;br/&gt;
+Credits&lt;br/&gt;
+Department" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="80" y="330" width="210" height="150" as="geometry"/>
+    </mxCell>
+        
+    <mxCell id="class" value="&lt;b&gt;&lt;u&gt;Class&lt;/u&gt;&lt;/b&gt;&lt;br/&gt;
+&lt;u&gt;ClassID&lt;/u&gt;&lt;br/&gt;
+CourseID (FK)&lt;br/&gt;
+LecturerID (FK)&lt;br/&gt;
+Schedule" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="430" y="330" width="210" height="150" as="geometry"/>
+    </mxCell>
+        
+    <mxCell id="enroll" value="&lt;b&gt;&lt;u&gt;Enrollment&lt;/u&gt;&lt;/b&gt;&lt;br/&gt;
+&lt;u&gt;EnrollmentID&lt;/u&gt;&lt;br/&gt;
+StudentID (FK, unique with ClassID)&lt;br/&gt;
+ClassID (FK)&lt;br/&gt;
+Grade" style="shape=rectangle;whiteSpace=wrap;rounded=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="780" y="330" width="230" height="150" as="geometry"/>
+    </mxCell>
+        
+    <mxCell id="e1" value="1 ———— N" style="endArrow=block;startArrow=none;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="course" target="class">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="0" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+        
+    <mxCell id="e2" value="1 ———— N" style="endArrow=block;startArrow=none;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="lecturer" target="class">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="0" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+        
+    <mxCell id="e3" value="1 ———— N" style="endArrow=block;startArrow=none;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="student" target="enroll">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="0" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+        
+    <mxCell id="e4" value="1 ———— N" style="endArrow=block;startArrow=none;strokeColor=#000000;fontSize=11;" edge="1" parent="1" source="class" target="enroll">
+      <mxGeometry relative="1" as="geometry">
+        <mxPoint x="0" y="0" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
