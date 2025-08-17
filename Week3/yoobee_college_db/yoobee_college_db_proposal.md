@@ -24,7 +24,7 @@ The Yoobee College database will manage core academic and administrative records
 -        Attributes: EnrollmentID, StudentID, ClassID, Grade
 -        Role: Tracks which students are enrolled in which classes.
 
-# Table Design (Relational Schema) ref: /yb_college_db_diagram.jpeg
+# Table Design (Relational Schema) ref: yb_college_db_diagram.jpeg
 
 Total tables: 5
 
