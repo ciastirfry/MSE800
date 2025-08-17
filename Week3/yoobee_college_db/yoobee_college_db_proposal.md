@@ -1,5 +1,5 @@
 # Project Scope – Yoobee College Database
-The Yoobee College database will manage core academic and administrative records, focusing on students, lecturers, courses, and classes. It will centralize enrollment, teaching assignments, and course offerings to ensure accurate, efficient, and accessible information management for the college.
+The Yoobee College database will manage core academic and administrative records, focusing on students, lecturers, courses, and classes. It will centralize enrollment, and course offerings to ensure accurate, efficient, and accessible information management for the college.
 
 
 # Entities and Attributes
@@ -10,7 +10,7 @@ The Yoobee College database will manage core academic and administrative records
 
     2. Lecturer
 -        Attributes: LecturerID, Name, Department, Email
--        Role: Stores lecturer information and teaching assignments.
+-        Role: Stores lecturer information.
 
     3. Course
 -        Attributes: CourseID, CourseName, Credits, Department
