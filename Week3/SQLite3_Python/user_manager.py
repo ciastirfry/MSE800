@@ -35,3 +35,13 @@ def delete_user(user_id):
     conn.commit()
     conn.close()
     print("🗑️ User deleted.")
+
+# ===== Activity 5 additions =====
+def view_students():
+    """Return all rows from Students table."""
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM Students")
+    rows = cursor.fetchall()
+    conn.close()
+    return rows
