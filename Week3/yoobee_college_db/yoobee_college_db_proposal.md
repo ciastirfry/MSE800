@@ -4,7 +4,7 @@ The YB College database will manage core academic and administrative records, fo
 
 # Entities and Attributes
 
-    1. Student
+    i. Student
 -        Attributes: StudentID, Name, Age, Address, Email
 -        Role: Stores student personal and enrollment details.
 
@@ -28,7 +28,7 @@ The YB College database will manage core academic and administrative records, fo
 
 Total tables: 5
 
-    1. Student
+    i. Student
 -        PK: StudentID
 -        Columns: Name, Age, Address, Email
 
