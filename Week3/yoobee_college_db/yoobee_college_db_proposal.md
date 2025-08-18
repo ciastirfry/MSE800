@@ -27,9 +27,9 @@ The Yoobee College database will manage core academic and administrative records
 ```
 
 ## Table Design (Relational Schema) ref: yb_college_db_diagram.jpeg
+```
 
 Total tables: 5
-```
 
 1. Student
       PK: StudentID
