@@ -52,4 +52,7 @@ Total tables: 5
       FKs: StudentID → Student.StudentID, ClassID → Class.ClassID
       Columns: Grade (nullable)
 ```
+
+## Database Diagram
+
 ![alt text](yb_college_db_diagram.jpeg)
