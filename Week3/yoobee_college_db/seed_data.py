@@ -15,8 +15,8 @@ LECTURERS = [
 ]
 
 COURSES = [
-    ("Programming", 23, "Computer Enigneerin"),
-    ("Computer Engineering", 20, "Computer Enigneerin"),
+    ("Programming", 23, "Computer Enigneering"),
+    ("Computer Engineering", 20, "Computer Enigneering"),
 ]
 
 CLASSES = [
