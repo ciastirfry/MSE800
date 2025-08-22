@@ -1,16 +1,46 @@
-Actors:
+Actors
+------
+1) Student
+   - Views courses and available class offerings
+   - Enrolls/drops classes and views timetable and grades
 
-Student – Registers and enrolls in courses.
-Lecturer – Assigned to courses.
-Admin – Manages reports and oversees operations.
-IT/DBA (under Admin) – Maintains and manages the database.
-Auditor (under Admin) – Reviews reports and ensures compliance.
+2) Lecturer
+   - Views teaching schedule, manages class rosters, records/updates grades
+
+3) Registrar / Admin
+   - Manages student and lecturer records, course catalog
+   - Schedules classes, manages enrollments, and produces operational reports
+
+4) IT / DBA
+   - Manages system access/roles and data protection (backup/restore)
+
+5) Auditor / QA
+   - Reviews audit logs and compliance reports
 
 
-Use Cases:
+Use Cases (with brief intent)
+-----------------------------
+• Browse Courses & Classes – discover course offerings and class schedules
+• View Personal Timetable – student sees enrolled class times
+• Enroll in Class / Drop Class – manage student enrollments
+• View Grades – student checks final grades
+• View Teaching Schedule – lecturer sees assigned classes
+• Manage Class Roster – add/remove students (admin actions or lecturer tools)
+• Record / Update Grades – lecturer sets grades per enrollment
+• Create/Update Student Records – registrar creates/maintains students
+• Create/Update Lecturer Records – registrar maintains lecturers
+• Create/Update Courses – registrar maintains catalog
+• Schedule Classes – create class offerings tied to Course + Lecturer
+• Manage Enrollments – override/waitlist/admin changes by registrar
+• Generate Operational Reports – enrollment counts, fill rates, etc.
+• Manage Access / Roles – IT controls user roles and permissions
+• Backup / Restore Database – IT manages data protection & recovery
+• Audit Logs & Compliance Reports – auditors/QA review changes & usage
 
-Register Student: Student provides details for database entry.
-Enroll in Course: Student selects and enrolls in available courses.
-Assign Lecturer: Lecturer is assigned to courses by Admin.
-Generate Reports: Admin and Auditor generate academic and operational reports.
-Manage Database: IT/DBA maintains system data integrity and structure.
+Mapping to Database Tables
+--------------------------
+- Students: Student
+- Lecturers: Lecturer
+- Courses: Course
+- Classes: Class (Course + Lecturer + schedule)
+- Enrollments: Enrollment (links Student ↔ Class with Grade)
