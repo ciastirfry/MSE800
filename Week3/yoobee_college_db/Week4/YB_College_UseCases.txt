@@ -1,0 +1,65 @@
+
+YB College – Actors & Use Cases
+=================================
+
+Overview
+--------
+This document outlines the primary actors and use cases for the YB College database/system designed in Week 3 – Activity 4.
+The focus is on operational flows that interact with the core entities: Student, Lecturer, Course, Class, and Enrollment.
+
+Actors
+------
+1) Student
+   - Views courses and available class offerings
+   - Enrolls/drops classes and views timetable and grades
+
+2) Lecturer
+   - Views teaching schedule, manages class rosters, records/updates grades
+
+3) Registrar / Admin
+   - Manages student and lecturer records, course catalog
+   - Schedules classes, manages enrollments, and produces operational reports
+
+4) IT / DBA
+   - Manages system access/roles and data protection (backup/restore)
+
+5) Auditor / QA
+   - Reviews audit logs and compliance reports
+
+Use Cases (with brief intent)
+-----------------------------
+• Browse Courses & Classes – discover course offerings and class schedules
+• View Personal Timetable – student sees enrolled class times
+• Enroll in Class / Drop Class – manage student enrollments
+• View Grades – student checks final grades
+• View Teaching Schedule – lecturer sees assigned classes
+• Manage Class Roster – add/remove students (admin actions or lecturer tools)
+• Record / Update Grades – lecturer sets grades per enrollment
+• Create/Update Student Records – registrar creates/maintains students
+• Create/Update Lecturer Records – registrar maintains lecturers
+• Create/Update Courses – registrar maintains catalog
+• Schedule Classes – create class offerings tied to Course + Lecturer
+• Manage Enrollments – override/waitlist/admin changes by registrar
+• Generate Operational Reports – enrollment counts, fill rates, etc.
+• Manage Access / Roles – IT controls user roles and permissions
+• Backup / Restore Database – IT manages data protection & recovery
+• Audit Logs & Compliance Reports – auditors/QA review changes & usage
+
+Mapping to Database Tables
+--------------------------
+- Students: Student
+- Lecturers: Lecturer
+- Courses: Course
+- Classes: Class (Course + Lecturer + schedule)
+- Enrollments: Enrollment (links Student ↔ Class with Grade)
+
+Files
+-----
+- YB_College_UseCases.jpeg – UML-style use case diagram
+- README_YB_College_UseCases.txt – this document
+
+How to Use
+----------
+1) Open the JPEG to include the diagram in reports or slides.
+2) Use the Actors & Use Cases list above to describe the system behavior in your submission.
+3) (Optional) I can also generate a draw.io version for further editing.
