@@ -9,20 +9,23 @@ class Person:
     def display_info(self):
         return f"Name: {self.name}, Address: {self.address}, Age: {self.age}, ID: {self.id_number}"
 
-# Inheritance is demonstrated below by creating child classes
-# that extend the base class 'Person' and add their own specific attributes.
+    def greet(self):
+        print(f"Hello from {self.name} at the University.")
 
-# Student class inherits from Person
+# Student class inherits from Person and overrides methods
 class Student(Person):
     def __init__(self, name, address, age, id_number, academic_record):
-        super().__init__(name, address, age, id_number)
+        super().__init__(name, address, age, id_number)  # Call to parent class initializer
         self.academic_record = academic_record
 
-    def display_info(self):
+    def display_info(self):  # Method overriding
         base_info = super().display_info()
         return f"{base_info}, Academic Record: {self.academic_record}"
 
-# Academic class inherits from Person
+    def greet(self):  # Overriding greet method
+        print(f"Greetings and felicitations from the student {self.name}!")
+
+# Academic class inherits from Person and overrides methods
 class Academic(Person):
     def __init__(self, name, address, age, id_number, tax_code, salary):
         super().__init__(name, address, age, id_number)
@@ -33,7 +36,10 @@ class Academic(Person):
         base_info = super().display_info()
         return f"{base_info}, Tax Code: {self.tax_code}, Salary: ${self.salary}"
 
-# GeneralStaff class inherits from Person
+    def greet(self):
+        print(f"Good day from Professor {self.name}.")
+
+# GeneralStaff class inherits from Person and overrides methods
 class GeneralStaff(Person):
     def __init__(self, name, address, age, id_number, tax_code, pay_rate):
         super().__init__(name, address, age, id_number)
@@ -44,12 +50,21 @@ class GeneralStaff(Person):
         base_info = super().display_info()
         return f"{base_info}, Tax Code: {self.tax_code}, Pay Rate: ${self.pay_rate}/hr"
 
+    def greet(self):
+        print(f"Hello from staff member {self.name}, how can I help?")
+
 # --- Example Usage ---
 if __name__ == "__main__":
-    s = Student("MJ", "456 Chicago St", 23, "S1001", "A+ in OOP")
-    a = Academic("Dr. Bird", "45 Celtics Ln", 44, "A2001", "TX456", 90000)
-    g = GeneralStaff("LB James", "78 Lakers Rd", 25, "G3001", "TX789", 25.50)
+    s = Student("MJ", "644 Chicago St", 23, "S1001", "A+ in OOP")
+    a = Academic("Dr. Bird", "76 Nest Ln", 11, "A2001", "TX456", 90000)
+    g = GeneralStaff("LB James", "98 Kings Rd", 24, "G3001", "TX789", 25.50)
 
+    # Display Information
     print(s.display_info())
     print(a.display_info())
     print(g.display_info())
+
+    # Demonstrate Method Overriding
+    s.greet()
+    a.greet()
+    g.greet()
