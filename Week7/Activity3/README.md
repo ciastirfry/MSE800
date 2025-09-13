@@ -43,15 +43,3 @@ Processing $220 via Google Pay
 Processing $780 via Cryptocurrency
 Same instance: True
 ```
-
----
-
-## 🧩 Adding a New Payment Method
-
-1. Create a new class implementing `PaymentProcessor`.
-2. Register it in `PaymentProcessorFactory._processors`.
-
-Done — no changes to the client code!
-
----
-
