@@ -1,0 +1,11 @@
+
+[MASTER]
+ignore-patterns=venv,.venv,build,dist
+[FORMAT]
+max-line-length=100
+[MESSAGES CONTROL]
+disable=missing-module-docstring,missing-class-docstring,missing-function-docstring
+[REPORTS]
+score=yes
+[MAIN]
+fail-under=9.5
