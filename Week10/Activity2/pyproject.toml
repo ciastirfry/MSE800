@@ -1,0 +1,7 @@
+
+[project]
+name = "oo-analyzer-extended"
+version = "0.2.0"
+description = "OO analyzer for length, uppercase, digits, special chars"
+readme = "README.md"
+requires-python = ">=3.9"

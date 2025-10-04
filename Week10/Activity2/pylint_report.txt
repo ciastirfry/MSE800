@@ -1,0 +1,24 @@
+************* Module oo_analyzer
+src/oo_analyzer/__init__.py:1:0: C0304: Final newline missing (missing-final-newline)
+************* Module oo_analyzer.analyzers
+src/oo_analyzer/analyzers.py:30:0: C0301: Line too long (101/100) (line-too-long)
+src/oo_analyzer/analyzers.py:7:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+src/oo_analyzer/analyzers.py:13:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+src/oo_analyzer/analyzers.py:25:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+src/oo_analyzer/analyzers.py:33:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+src/oo_analyzer/analyzers.py:41:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module oo_analyzer.main
+src/oo_analyzer/main.py:21:8: W0621: Redefining name 'json' from outer scope (line 4) (redefined-outer-name)
+src/oo_analyzer/main.py:21:8: W0404: Reimport 'json' (imported line 4) (reimported)
+src/oo_analyzer/main.py:21:8: C0415: Import outside toplevel (json) (import-outside-toplevel)
+src/oo_analyzer/main.py:35:4: W0404: Reimport 'json' (imported line 4) (reimported)
+src/oo_analyzer/main.py:35:4: C0415: Import outside toplevel (json) (import-outside-toplevel)
+src/oo_analyzer/main.py:4:0: W0611: Unused import json (unused-import)
+************* Module oo_analyzer.processor
+src/oo_analyzer/processor.py:7:0: R0903: Too few public methods (1/2) (too-few-public-methods)
+************* Module test_extended
+tests/test_extended.py:4:0: C0301: Line too long (103/100) (line-too-long)
+
+------------------------------------------------------------------
+Your code has been rated at 8.57/10 (previous run: 9.40/10, -0.83)
+
