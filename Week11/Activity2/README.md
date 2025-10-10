@@ -23,13 +23,3 @@ python tests/test_expense_tracker.py
 ```bash
 python expense_tracker.py
 ```
-
-## Push to GitHub (example)
-```bash
-git init
-git add .
-git commit -m "Week11 Activity2: OOP Expense Tracker with unit tests"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
