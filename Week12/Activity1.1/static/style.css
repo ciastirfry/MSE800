@@ -1,0 +1,9 @@
+html, body { height: 100%; margin: 0; }
+body { font-family: Georgia, 'Times New Roman', serif; background: #fff; }
+main { display: grid; place-items: center; height: 100%; padding: 1rem; }
+h1 { font-size: 96px; font-weight: 500; margin: 0; text-align: center; }
+@media (max-width: 480px) { h1 { font-size: 56px; } }
+.card { display: grid; gap: .5rem; border: 1px solid #ddd; border-radius: 12px; padding: 1rem; max-width: 420px; width: 100%; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+.card input { padding: .6rem .8rem; border: 1px solid #bbb; border-radius: 10px; font-size: 1rem; }
+.card button { padding: .6rem .8rem; border-radius: 10px; border: 1px solid #999; background: #f2f2f2; cursor: pointer; }
+.hint { color: #666; font-size: .9rem; }

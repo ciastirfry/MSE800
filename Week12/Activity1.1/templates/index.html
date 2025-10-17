@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flask – Variable Path</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main>
+      <form method="post" action="{{ url_for('go') }}" class="card">
+        <label for="name">Enter your name:</label>
+        <input id="name" name="name" placeholder="Lili" required>
+        <button type="submit">Go</button>
+        <p class="hint">This will navigate to <code>/username/&lt;your-name&gt;</code>.</p>
+      </form>
+    </main>
+  </body>
+</html>
