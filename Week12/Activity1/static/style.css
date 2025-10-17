@@ -1,0 +1,5 @@
+html, body { height: 100%; margin: 0; }
+body { font-family: Georgia, 'Times New Roman', serif; background: #fff; }
+main { display: grid; place-items: center; height: 100%; }
+h1 { font-size: 96px; font-weight: 500; margin: 0; }
+@media (max-width: 480px) { h1 { font-size: 64px; } }
