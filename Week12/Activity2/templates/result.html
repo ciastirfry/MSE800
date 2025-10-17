@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Generated Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main>
+      <section class="card center">
+        <p class="muted">Your hyperlink:</p>
+        <p class="link"><a href="{{ link_url }}" target="_blank" rel="noopener">{{ link_text }}</a></p>
+        <img class="preview" src="{{ image_src }}" alt="User provided image">
+        <p><a class="back" href="{{ url_for('index') }}">← Build another</a></p>
+      </section>
+    </main>
+  </body>
+</html>

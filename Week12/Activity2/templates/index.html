@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Week 12 – Activity 2: Hyperlink & Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>Build a page: Hyperlink + Image</h1>
+        <p class="muted">Enter a hyperlink, then either paste an image URL or upload an image file.</p>
+        <form class="grid" action="{{ url_for('build') }}" method="post" enctype="multipart/form-data">
+          <label>Hyperlink Text
+            <input name="link_text" placeholder="OpenAI website">
+          </label>
+          <label>Hyperlink URL
+            <input name="link_url" placeholder="https://openai.com" required>
+          </label>
+          <label>Image URL (optional)
+            <input name="img_url" placeholder="https://example.com/image.jpg">
+          </label>
+          <div class="or">— or —</div>
+          <label>Upload Image (png, jpg, jpeg, gif, webp)
+            <input type="file" name="image_file" accept=".png,.jpg,.jpeg,.gif,.webp">
+          </label>
+          <button type="submit">Create Page</button>
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <ul class="flash">
+              {% for cat, msg in messages %}
+                <li class="{{ cat }}">{{ msg }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+      </section>
+    </main>
+  </body>
+</html>
