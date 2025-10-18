@@ -1,0 +1,4 @@
+
+/* Green background, red text */
+body { background: green; color: red; font-family: system-ui, Arial, sans-serif; }
+h1 { margin: 2rem; }
